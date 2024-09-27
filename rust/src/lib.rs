@@ -17,7 +17,7 @@ fn get_random_joke() -> String {
 
 /// Create a Python module named `jokes`
 #[pymodule]
-fn jokes(m: &Bound<'_, PyModule>) -> PyResult<()> {
+fn _jokes(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(get_random_joke, m)?)?;
     Ok(())
 }
